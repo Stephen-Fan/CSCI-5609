@@ -23,7 +23,7 @@ function makeStatesConfig(stateTotals, colorScale) {
 export default function App() {
   const colorScale = scaleLinear()
     .domain([Math.min(...Object.values(stateTotals)), Math.max(...Object.values(stateTotals))])
-    .range(["hsl(0, 20%, 50%)", "hsl(0, 100%, 50%)"]);
+    .range(["hsl(0, 90%, 95%)", "hsl(0, 90%, 30%)"]);
 
   const statesCustomConfig = makeStatesConfig(stateTotals, colorScale);
 

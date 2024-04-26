@@ -23,6 +23,11 @@ const Simulation = () => {
     };
 
     const handleSimulation = () => {
+        if (selectedState === "Select a State" || selectedAge === "") {
+            setSimulationResult("Please select a state and an age to simulate.");
+            return;
+        }
+
         const stateData = SimData[selectedState];
         if (stateData) {
             const ageData = stateData[selectedAge];
@@ -108,7 +113,6 @@ const Simulation = () => {
                 </div>
             ) : (
 				<div>
-					<h2>Simulation Result</h2>
 					<p>{simulationResult}</p>
 				</div>
 			)}
